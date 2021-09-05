@@ -1,0 +1,19 @@
+.containre-fluid{
+    background-color: #17223A;
+}
+
+a{
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.border-1{
+    border: 10px solid white;
+    border-radius: 40px;
+}
+
+.border-1:hover{
+    background-color: rgb(6, 1, 48);
+    transition: 1.5s;
+}

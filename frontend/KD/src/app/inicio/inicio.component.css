@@ -1,0 +1,23 @@
+.container-fluid{
+    background-color: #17223A;
+    background-image: url(https://i.imgur.com/UGdTYMP.png);
+    background-size: cover;
+    height: 91vh;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: 5rem;
+}
+
+p{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-bottom: 0;
+}
+
+.card{
+    -webkit-box-shadow: -1px 8px 11px -2px #000000; 
+    box-shadow: -1px 8px 11px -2px #000000;
+}

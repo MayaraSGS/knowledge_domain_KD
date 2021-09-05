@@ -1,0 +1,15 @@
+.container-fluid{
+    background-color: #17223A;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+a{
+    font-size: .9rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sol{
+    color: #FDC209;
+}
