@@ -1,0 +1,51 @@
+.container-fluid{
+    background-image: url(https://i.imgur.com/akRVfDm.png);
+    background-size: cover;
+    height: 91vh;
+}
+
+.container{
+    margin: 2rem;
+    margin-top: 3rem;
+
+}
+
+form{
+    margin: 2.5rem 5rem 0 6rem;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid rgb(19, 18, 18);
+}
+
+input[type=email] {
+    border: none;
+    border-bottom: 1px solid rgb(19, 18, 18);
+}
+
+textarea{
+    border: 1px solid rgb(19, 18, 18);
+    border-radius: 4px;
+}
+
+.card{
+    margin-top: 6.2rem;
+    margin-left: 1rem;
+    padding: 20px;
+    background-color: #1F4378;
+}
+
+.card-title{
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 3.5rem;
+}
+
+.card-text{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;;
+}
