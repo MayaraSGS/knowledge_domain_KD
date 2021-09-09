@@ -12,6 +12,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FormsModule } from '@angular/forms';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     InicioComponent,
     SobreNosComponent,
     EntrarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,

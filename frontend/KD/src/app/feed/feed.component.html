@@ -1,0 +1,122 @@
+<!--NavBar criar publicação-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="container">
+    <a class="navbar-brand titleColor" href="#">knowledge Domain</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <div class="row mt-3 mb-5 d-flex">
+          <div>
+            <button class=" botaoPublicar btn btn-light mt-2 mr-3" data-bs-toggle="modal"
+              data-bs-target="#novaPostagem">Começar publicação</button>
+
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--/NavBar criar publicação-->
+
+<!--Modal Nova Postagem-->
+
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="titulo">Titulo</label>
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.publicacao' class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">
+
+            <div class="d-flex align-items-center">
+              Escolha um tema ou
+              <button type="button" class="btn btn-link px-1" data-bs-dismiss="modal" routerLink='/tema'>
+                cadastre um novo
+              </button>
+              :
+            </div>
+
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='getAllTemas()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.nomeTema}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)='publicar()' data-bs-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Modal Nova Postagem-->
+
+
+<!--Feed-->
+
+<div class="row">
+
+  <div class="card" style="width: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">Nome</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Informações do Usuário</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+    </div>
+  </div>
+
+  <div class="card" style="width: 71rem;">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Classificar por:</h6>
+
+      <div class="card cardPostagemColor rounded" *ngFor='let item of listaPostagem' style="width: 65rem;">
+        <img src="" class="" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.titulo}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{item.descricao}}</h6>
+
+          <div>
+            <div>
+              <h6>{{item.usuario.nome}}</h6>
+              <img src="{{item.usuario.foto}}" alt="Foto do autor" width="25px" height="25px" class="img-fluid rounded-circle">
+            </div>
+
+            <div>
+              <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/mm/yyyy'}}</small></p>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+</div>
+<!--/Feed-->

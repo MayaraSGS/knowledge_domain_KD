@@ -1,3 +1,4 @@
+import { FeedComponent } from './feed/feed.component';
 import { InicioComponent } from './inicio/inicio.component';
 
 import { NgModule } from '@angular/core';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'entrar', component: EntrarComponent},
   {path:'cadastrar', component: CadastrarComponent},
   {path:'sobre-nos', component: SobreNosComponent},
-  {path:'contato', component: ContatoComponent}
+  {path:'contato', component: ContatoComponent},
+  {path:'feed', component: FeedComponent}
 ];
 
 @NgModule({

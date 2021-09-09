@@ -1,4 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment.prod';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../model/User';
@@ -12,6 +13,10 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>('https://knowledgedomain.herokuapp.com/api/v1/usuario/login', userLogin)
