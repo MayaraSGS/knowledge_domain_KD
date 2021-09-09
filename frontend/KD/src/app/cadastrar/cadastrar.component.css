@@ -1,0 +1,37 @@
+.container-fluid{
+  background-color: #17223A;
+}
+
+img{
+  margin: 1.9rem 0 0 9rem;
+}
+
+h1 span{
+    display: block;
+}
+
+label span{
+  color: #FDC209;
+}
+
+
+button{
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 55px;
+  border: 2px solid #E1F502;
+  padding: .2rem 4rem .2rem 4rem;
+}
+
+
+.my-bg{
+  color: #E1F502;
+}
+
+.my-ml{
+  margin-left: 1.3rem;
+}
+hr{
+  margin: 0;
+  padding: 0;
+}

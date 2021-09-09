@@ -1,1 +1,50 @@
-<p>entrar works!</p>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-6">
+
+      <div class="card bg-transparent border-0" style="width: 18rem;">
+        <div class="card-body">
+
+          <h5 class="text-white">Login</h5>
+
+          <form class="form-control bg-transparent mt-5 border-0">
+
+            <div class="form-group">
+              <label class="text-white" for="email">Email</label>
+              <input [(ngModel)]="userLogin.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+
+            <div class="form-group mt-4 mb-4">
+              <label class="text-white" for="exampleInputPassword1">Password</label>
+              <input [(ngModel)]="userLogin.senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn bg-white my-ml" (click)="entrar()">Entrar</button>
+            <button routerLink='/inicio' type="submit" class="btn ml-2 my-bg">Cancelar</button>
+          </form>
+
+          <p class="text-white a text-uppercase">Ou</p>
+          <p class="text-white mt-2">
+            Ainda não faz parte da equipe? Entao venha ser agora <a class="btn-my" routerLink='/cadastrar'>Cadastre-se</a>
+          </p>
+        </div>
+      </div>
+      <!--card-->
+
+    </div>
+    <!--col-->
+
+    <div class="col-md-6 border-left mt-3">
+      <img src="https://images-ext-1.discordapp.net/external/j8IsZIwxt9uzqlgYboBrxxvNnv5V5UKqRIxQe1FSgrE/https/i.imgur.com/00MSefU.png?width=441&height=413" alt="..." width="450rem">
+      <button routerLink='/contato' type="submit" class="btn my-bag">Enviar Mensagem</button>
+    </div>
+    <!--col-->
+
+  </div>
+  <!--row-->
+
+</div>
+<hr>
