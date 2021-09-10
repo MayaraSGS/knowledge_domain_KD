@@ -1,0 +1,19 @@
+.container-fluid{
+  background-color: #17223A;
+}
+
+ul a{
+  color: aliceblue;
+}
+
+.my-ml{
+  margin-left: 10rem;
+}
+
+input[type=search]{
+  border: 2px solid transparent;
+  border-radius: 40px;
+  padding: 5px 1rem 5px 8rem;
+  background-color: #EAEAEA;
+  color: #7A7575;
+}

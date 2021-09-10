@@ -1,0 +1,28 @@
+.container-fluid{
+  background-color: #EDF0F4;
+}
+
+.my-po{
+  margin: 0 6.5rem 10px 6.5rem;
+}
+
+h6 span{
+  display: block;
+}
+
+.text-gray{
+  color: gray;
+}
+
+p span{
+  display: block;
+}
+
+.mp{
+  font-size: 1.4rem;
+  font-family: 'Rokkitt', serif;
+}
+
+.my-bg{
+  background-color: #EBE9E9;
+}

@@ -1,7 +1,36 @@
+.container-fluid{
+  background-color: #eDF0F4;
+}
+
+.navBarColor{
+  background-color: #FFFFFF;
+}
+
 .cardPostagemColor{
   background-color: #F0F0F0;
 }
 
 .botaoPublicar{
   background-color: #EAEAEA;
+}
+
+.titleColor{
+  color: #FF9900;
+}
+
+.textoColor{
+  color: #1A3761;
+}
+
+.border{
+  border-radius: 5px;
+}
+
+.border-Card-Feed{
+  border-radius: 15px;
+}
+
+
+.border-Publicação{
+  border-radius: 5px;
 }

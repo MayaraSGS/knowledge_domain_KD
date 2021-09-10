@@ -10,33 +10,35 @@ import { Postagem } from '../model/Postagem';
 })
 export class PostagemService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   token = {
-    headers: new HttpHeaders().set('Auhorization', environment.token)
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://knowledgedomain.herokuapp.com/api/v1/postagens', this.token)
+  getAllPostagens(): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>('https://knowledgedomain.herokuapp.com/api/v1/postagem/getAll', this.token)
   }
 
-  getByIdPostagem(id: number): Observable<Postagem>{
+  getByIdPostagem(id: number): Observable<Postagem> {
     return this.http.get<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagens/${id}', this.token)
   }
 
-  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+  getByTituloPostagem(titulo: string): Observable<Postagem[]> {
     return this.http.get<Postagem[]>('https://knowledgedomain.herokuapp.com/api/v1/postagens/titulo/${titulo}', this.token)
   }
 
-  postPostagem(postagem: Postagem) : Observable<Postagem>{
-    return this.http.post<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagens', postagem, this.token)
+  postPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.post<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagem', postagem, this.token)
   }
 
-  putPostagem(postagem: Postagem): Observable<Postagem>{
+  putPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.put<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagens', postagem, this.token)
   }
 
-  deletePostagem(id: number){
+  deletePostagem(id: number) {
     return this.http.delete('https://knowledgedomain.herokuapp.com/api/v1/postagens/${id}', this.token)
   }
 
