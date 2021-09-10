@@ -1,3 +1,6 @@
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { TemaComponent } from './tema/tema.component';
 import { FeedComponent } from './feed/feed.component';
 import { InicioComponent } from './inicio/inicio.component';
 
@@ -13,11 +16,16 @@ const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
 
   {path:'inicio', component: InicioComponent},
-  {path:'entrar', component: EntrarComponent},
-  {path:'cadastrar', component: CadastrarComponent},
   {path:'sobre-nos', component: SobreNosComponent},
   {path:'contato', component: ContatoComponent},
-  {path:'feed', component: FeedComponent}
+
+  {path:'entrar', component: EntrarComponent},
+  {path:'cadastrar', component: CadastrarComponent},
+
+  {path:'feed', component: FeedComponent},
+  {path:'tema', component: TemaComponent},
+  {path: 'tema-delete/:id', component: TemaDeleteComponent},
+  {path: 'tema-edit/:id', component: TemaEditComponent}
 ];
 
 @NgModule({

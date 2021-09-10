@@ -40,7 +40,6 @@ export class FeedComponent implements OnInit {
 
     this.getAllPostagens()
     this.getAllTemas()
-
   }
 
   getAllTemas(){
@@ -52,7 +51,7 @@ export class FeedComponent implements OnInit {
   getAllPostagens(){
     this.PostagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagem = resp
-
+      console.log(JSON.stringify(this.listaPostagem))
     })
   }
   findByIdTema(){
@@ -68,10 +67,12 @@ export class FeedComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
 
+    console.log(JSON.stringify(this.postagem))
     this.PostagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
+      this.getAllPostagens()
     })
   }
 

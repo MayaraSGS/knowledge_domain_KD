@@ -18,11 +18,11 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  entrar(userLogin: UserLogin): Observable<UserLogin>{
+  entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>('https://knowledgedomain.herokuapp.com/api/v1/usuario/login', userLogin)
   }
 
-  cadastrar(user: User): Observable<User>{
+  cadastrar(user: User): Observable<User> {
     return this.http.post<User>('https://knowledgedomain.herokuapp.com/api/v1/usuario/novo', user)
   }
 
