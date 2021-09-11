@@ -26,4 +26,24 @@ export class AuthService {
     return this.http.post<User>('https://knowledgedomain.herokuapp.com/api/v1/usuario/novo', user)
   }
 
+  logado(){
+    let ok: boolean = false
+
+    if(environment.token != ''){
+      ok = true
+    }
+
+    return ok
+  }
+
+  deslogado(){
+    let des: boolean = false
+
+    if(environment.token == ''){
+      des = true
+    }
+
+    return des
+  }
+
 }

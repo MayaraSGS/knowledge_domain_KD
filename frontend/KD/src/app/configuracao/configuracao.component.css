@@ -1,0 +1,43 @@
+.fundoColor1{
+  background-color:white;
+}
+
+.fundoColor2{
+  background-color: #F0F0F0;
+}
+
+.textColor{
+  color: #393F49;
+}
+
+h4{
+  font-weight: bold;
+  font-size: 2rem;
+  color: #1A3761;
+  border-bottom : 2px solid #1A3761;
+}
+.textBold{
+  font-weight: bold;
+}
+
+.border-bottom{
+  border-bottom : 5px solid #1A3761;
+}
+
+
+.btn-editar{
+  background-color: #60BE16;
+  color: white;
+}
+
+.col-md-7{
+  height: 100vh;
+}
+
+.borderButtom{
+  border-radius: 10px;
+}
+
+.border{
+  border-radius: 10px;
+}
