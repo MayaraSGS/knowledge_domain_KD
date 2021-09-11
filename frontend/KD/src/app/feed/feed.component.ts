@@ -32,7 +32,7 @@ export class FeedComponent implements OnInit {
     private temaService: TemaService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
@@ -74,6 +74,29 @@ export class FeedComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
+  }
+
+  sair(){
+    this.router.navigate(['/inicio'])
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
+  }
+
+  url='../../assets/perfil.png'
+
+  onSelectFile(e:any){
+    if(e.target.files){
+
+      var reader = new FileReader()
+      reader.readAsDataURL(e.target.files[0])
+
+      reader.onload = (event:any) => {
+        this.url = event.target.result
+      }
+
+    }
   }
 
 }

@@ -2,35 +2,60 @@
   background-color: #eDF0F4;
 }
 
-.navBarColor{
-  background-color: #FFFFFF;
+.button{
+  border: 2px solid transparent;
+  border-radius: 40px;
+  padding: 5px 9rem 5px 9rem;
+  align-content: center;
+  background-color: #EAEAEA;
+  color: #7A7575;
 }
 
-.cardPostagemColor{
+.btn-my{
+  border: none;
+  border-bottom: 2px solid rgb(75, 77, 83);
+  background-color: #fff;
+}
+
+.my-btn2{
+  border: none;
+  border-bottom: 2px solid rgb(75, 77, 83);
+  background-color: #eDF0F4;
+}
+
+button span{
+  font-size: .9rem;
+  color: rgb(56, 55, 55);
+}
+
+.card-body{
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.bg-card{
   background-color: #F0F0F0;
 }
 
-.botaoPublicar{
-  background-color: #EAEAEA;
+.my-custom{
+  padding: 0 2rem 1rem 2rem;
 }
 
-.titleColor{
-  color: #FF9900;
+.my-buttom-custom{
+  padding: .3rem 3rem .3rem 3rem;
+  color: beige;
 }
 
-.textoColor{
-  color: #1A3761;
+/* Esconde o input */
+input[type='file'] {
+  display: none
 }
 
-.border{
+/* Aparência que terá o seletor de arquivo */
+label {
+  background-color: #3498db;
   border-radius: 5px;
-}
-
-.border-Card-Feed{
-  border-radius: 15px;
-}
-
-
-.border-Publicação{
-  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px
 }
