@@ -1,3 +1,4 @@
+import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';
 import { Tema } from './../model/Tema';
 import { PostagemService } from './../service/postagem.service';
@@ -29,7 +30,8 @@ export class FeedComponent implements OnInit {
   constructor(
     private router: Router,
     private PostagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -54,6 +56,13 @@ export class FeedComponent implements OnInit {
       console.log(JSON.stringify(this.listaPostagem))
     })
   }
+
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
+      this.user = resp
+    })
+  }
+
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
       this.tema = resp

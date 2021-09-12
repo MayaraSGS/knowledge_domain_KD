@@ -1,0 +1,53 @@
+.container-fluid{
+  background-color: #EDF0F4;
+}
+.form-control{
+  background-color: #EAEAEA;
+}
+
+.row1{
+  background-color: #FFFFFF;
+}
+
+.row2{
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.textTitulo{
+  color: #1A3761;
+  font-weight: bold;
+}
+
+.textDescricao{
+  color: #1A3761;
+  font-weight: bold;
+}
+
+.textTema{
+  font-weight: bold;
+}
+
+.buttonEditar{
+  font-weight: bold;
+  color: white;
+  background-color: #60BE16;
+  border-radius: 10px;
+}
+
+.buttonApagar{
+  font-weight: bold;
+  color: white;
+  background-color: #DC0000;
+  border-radius: 10px;
+}
+
+.border{
+  border-radius: 12px;
+}
+
+.buttonCadastrar{
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #FDC209;
+}

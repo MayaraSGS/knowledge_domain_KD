@@ -1,23 +1,24 @@
-.container-fluid{
-    background-color: #17223A;
-    background-image: url(https://i.imgur.com/UGdTYMP.png);
-    background-size: cover;
-    height: 91vh;
+.bg-meioAzul{
+  background-image: url('https://i.imgur.com/2dYu2Mx.png');
+  background-size: cover;
+}
+
+.po-1{
+  position: absolute;
+  top: 30rem;
 }
 
 h1{
-    font-size: 4rem;
-    font-weight: bold;
-    margin-left: 5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-left: 2rem;
 }
 
 p{
-    margin-top: 2rem;
-    margin-left: 5rem;
-    margin-bottom: 0;
+  margin-left: 2rem;
 }
 
-.card{
-    -webkit-box-shadow: -1px 8px 11px -2px #000000; 
-    box-shadow: -1px 8px 11px -2px #000000;
+img{
+  box-shadow: 0 0 .1em black;
+  border-radius: 10px;
 }
