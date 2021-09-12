@@ -11,7 +11,7 @@
             <div class="card-body">
 
               <img [src]="url" alt="foto perfil" class="rounded mx-auto d-block img-fluid" width="100rem">
-              <label for="selecao-arquivo" class="d-flex justify-content-center">Mudar foto</label>
+              <label for="selecao-arquivo" class="d-flex justify-content-center label">Mudar foto</label>
               <input type="file" (change)='onSelectFile($event)' id="file">
 
               <h5 class="card-title text-center">Nome</h5>
@@ -31,8 +31,14 @@
 
           <div class="card mb-2">
             <div class="card-body">
+
+              <div class="d-flex flex-column">
+                <p>Minhas Postagens</p>
+              </div>
+
               <a routerLink='/configuracao'>Configuração</a>
               <a (click)='sair()' routerLink='/inicio' class="ml-4">Sair</a>
+
             </div>
           </div>
 
@@ -93,9 +99,9 @@
                   <span>Classificar por*</span>
                 </button>
                 <div class="dropdown-menu">
+                  <button class="dropdown-item" type="button">Todos</button>
                   <button class="dropdown-item" type="button">Data</button>
-                  <button class="dropdown-item" type="button">Ordem alfabética</button>
-                  <button class="dropdown-item" type="button">Novidades</button>
+                  <button class="dropdown-item" type="button">Tema</button>
                 </div>
               </div>
 
@@ -122,13 +128,12 @@
                           <span>Config*</span>
                         </button>
                         <div class="dropdown-menu">
-                          <button class="dropdown-item" type="button">Data</button>
-                          <button class="dropdown-item" type="button">Ordem alfabética</button>
-                          <button class="dropdown-item" type="button">Novidades</button>
+                          <button class="dropdown-item" type="button">Deletar</button>
+                          <button class="dropdown-item" type="button">Editar</button>
                         </div>
                       </div>
 
-                      <p>13 Junho - 4 min</p>
+                      <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
 
                     </div>
 
@@ -208,6 +213,3 @@
   <!--col-->
 
 </div>
-
-
-<app-rodape></app-rodape>

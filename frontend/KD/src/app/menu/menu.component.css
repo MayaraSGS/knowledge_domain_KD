@@ -1,19 +1,32 @@
-.containre-fluid{
-    background-color: #17223A;
+.container-fluid{
+  background-image: url('https://i.imgur.com/In8Oxce.png');
+  background-size: cover;
 }
 
-a{
-    font-size: .9rem;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+.nav-link{
+  margin-top: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.border-1{
-    border: 10px solid white;
-    border-radius: 40px;
+.border-cadastro{
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  padding: .3rem 3rem .3rem 3rem;
+  color: rgb(255, 255, 255);
 }
 
-.border-1:hover{
-    background-color: rgb(6, 1, 48);
-    transition: 1.5s;
+ul{
+  list-style: none;
+}
+
+.nav-link-custom{
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.my-text{
+  color: black;
 }

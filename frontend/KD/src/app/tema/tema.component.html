@@ -1,1 +1,72 @@
-<p>tema works!</p>
+<div class="container-fluid p-2">
+  <div class="row justify-content-center align-items-center">
+
+    <!--Cadstro do tema-->
+
+    <div class="col-md-10">
+      <div class="row row1 shadow-sm">
+
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <div class="form-group d-flex justify-content-center">
+              <div class="form-inline">
+                <input [(ngModel)]='tema.nomeTema' name="nomeTema" type="text" class="form-control border "
+                  style="min-width:350px;" id="descricao" placeholder="Digite um novo tema">
+                <button class="btn ml-3 buttonCadastrar shadow-sm" (click)='cadastrar()'> Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--/Cadstro do tema-->
+
+    <!--Temas-->
+
+    <div class="col-md-10">
+      <div class="row row2 mt-3 shadow-sm">
+
+        <div class="row">
+          <div class="col-md-12 p-5">
+
+            <div class="row">
+              <div class="col-md-12 d-flex justify-content-center">
+                <h2 class="text textTitulo center mb-4">Todos os temas</h2>
+              </div>
+            </div>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col" class="textDescricao">Descrição</th>
+                  <th scope="col" class="text-right textDescricao">Modificações</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr *ngFor='let item of listaTemas'>
+
+                  <td class="textTema">{{item.nomeTema}}</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn buttonEditar m-2 shadow-sm"
+                      [routerLink]="['/tema-edit', item.id]">Editar</button>
+                    <button class="btn buttonApagar m-2 shadow-sm"
+                      [routerLink]="['/tema-delete', item.id]">Apagar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--/Temas-->
+
+  </div>
+</div>

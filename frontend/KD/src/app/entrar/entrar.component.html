@@ -1,5 +1,4 @@
-<hr>
-<div class="container-fluid">
+<div class="container-fluid pb-5">
   <div class="row">
 
     <div class="col-md-6">
@@ -7,18 +6,18 @@
       <div class="card bg-transparent border-0" style="width: 18rem;">
         <div class="card-body">
 
-          <h5 class="text-white">Login</h5>
+          <h5>Login</h5>
 
           <form class="form-control bg-transparent mt-5 border-0">
 
             <div class="form-group">
-              <label class="text-white" for="email">Email</label>
+              <label for="email">Email</label>
               <input [(ngModel)]="userLogin.email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
                 placeholder="Enter email">
             </div>
 
             <div class="form-group mt-4 mb-4">
-              <label class="text-white" for="password">Password</label>
+              <label for="password">Password</label>
               <input [(ngModel)]="userLogin.senha" name="password" type="password" class="form-control" id="password" placeholder="Password">
             </div>
 
@@ -26,8 +25,8 @@
             <button routerLink='/inicio' type="submit" class="btn ml-2 my-bg">Cancelar</button>
           </form>
 
-          <p class="text-white a text-uppercase">Ou</p>
-          <p class="text-white mt-2">
+          <p class="a text-uppercase">Ou</p>
+          <p class="mt-2">
             Ainda não faz parte da equipe? Entao venha ser agora <a class="btn-my" routerLink='/cadastrar'>Cadastre-se</a>
           </p>
         </div>
@@ -37,7 +36,7 @@
     </div>
     <!--col-->
 
-    <div class="col-md-6 border-left mt-3">
+    <div class="col-md-6 border-left bg-azul pt-3">
       <img src="https://images-ext-1.discordapp.net/external/j8IsZIwxt9uzqlgYboBrxxvNnv5V5UKqRIxQe1FSgrE/https/i.imgur.com/00MSefU.png?width=441&height=413" alt="..." width="450rem">
       <button routerLink='/contato' type="submit" class="btn my-bag">Enviar Mensagem</button>
     </div>

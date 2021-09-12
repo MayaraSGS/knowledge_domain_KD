@@ -1,67 +1,112 @@
 <div class="container-fluid">
   <div class="row">
 
-      <!--Opções-->
+    <!--Informações-->
 
-      <div class="col-md-5 fundoColor1 p-3">
-          <div class="col-md-12">
-              <div class="justify-content-center">
-                  <h4 class=" textColorTitulo">Configurações</h4>
-                  <h6 class="textColorTitulo">Configurações gerais da conta</h6>
-              </div>
+    <div class="col-md-5 fundoColor1 p-3">
+      <div class="col-md-12 row d-flex justify-content-center">
+        <div class=" row d-flex justify-content-center">
+          <h4 class=" textTitulo">Configurações</h4>
+          <h5 class="textTituloSecundario">Configurações gerais da conta</h5>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mt-4">
+            <img src="https://f.i.uol.com.br/fotografia/2014/09/02/434016-600x600-1.jpeg" alt="Foto do autor"
+              width="115px" height="115px" class="img-fluid rounded-circle">
           </div>
+        </div>
+
+        <div class="col-md-8 mt-4">
+          <h4 class="textInformacao">Leandro Santos</h4>
+          <!--Nome do usuario-->
+          <h4 class="textInformacao mt-3">29 anos, professor de Historia naturais</h4>
+          <!--Descrição-->
+
+        </div>
+
+        <div class=" row d-flex justify-content-center mt-4">
+          <h5 class=" text-gray">Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Curabitur purus
+            ultricies ipsum scelerisque. Consequat facilisi
+            interdum non ultrices sollicitudin convallis
+            facilisis aliquam velit. Donec tincidunt etiam
+            viverra a enim adipiscing. In tristique quis
+            tristique nullam mattis purus consequat, id.
+          </h5>
+          <!--Bio-->
+
+        </div>
+
+
       </div>
+    </div>
 
-      <!--/Opções-->
+    <!--/Informações-->
 
-      <!--Formulario-->
+    <!--Formulario-->
 
-      <div class="col-md-7 fundoColor2 p-3">
-          <div class="col-md-12">
-              <div class="row d-flex justify-content-start">
+    <div class="col-md-7 fundoColor2 p-3">
+      <div class="col-md-12">
+        <div class="row d-flex justify-content-start">
 
-                  <div>
-                      <img src="https://f.i.uol.com.br/fotografia/2014/09/02/434016-600x600-1.jpeg"
-                          alt="Foto do autor" width="132px" height="132px" class="img-fluid rounded-circle">
-                  </div>
 
-                  <form class="mt-5">
-                      <div class="form-group">
-                          <label class="textBold" for="nome">Meu Nome</label>
-                          <div class="form-inline">
-                              <input type="email" class="form-control border border-secondary"
-                                  style="min-width:320px;" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                  placeholder="">
-                              <button type="submit" class="btn btn-editar ml-3 my-1 borderButtom">Editar</button>
-                          </div>
-                      </div>
 
-                      <div class="form-group">
-                          <label class="textBold" for="usuario">Meu usúario</label>
-                          <div class="form-inline">
-                              <input type="email" class="form-control border border-secondary"
-                                  style="min-width:320px;" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                  placeholder="">
-                              <button type="submit" class="btn btn-editar ml-3 my-1 borderButtom">Editar</button>
-                          </div>
-                      </div>
+          <form class="mt-1">
 
-                      <div class="form-group">
-                          <label class="textBold" for="exampleInputPassword1">Minha senha</label>
-                          <div class="form-inline">
-                              <input type="email" class="form-control border border-secondary"
-                                  style="min-width:320px;" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                  placeholder="">
-                              <button type="submit" class="btn btn-editar ml-3 my-1 borderButtom">Editar</button>
-                          </div>
-                      </div>
+            <div class="form-group">
+              <label for="nome" class="textBold">Nome</label>
+              <input [(ngModel)]="user.nome" class="form-control border border-secondary" type="text" name="nome"
+                id="nome" placeholder="">
+            </div>
 
-                  </form>
-              </div>
+            <div class="form-group">
+              <label for="senha" class="textBold">Senha</label>
+              <input (input)='confirmSenha($event)' class="form-control border border-secondary" type="password"
+                name="senha" id="senha" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="confirmSenha" class="textBold">Confirmar Senha</label>
+              <input [(ngModel)]='user.senha' class="form-control border border-secondary" type="password"
+                name="confirmSenha" id="confirmSenha" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="descricao" class="textBold">Descrição</label>
+              <input [(ngModel)]="user.email" class="form-control border border-secondary" type="text" name="descricao"
+                id="descricao" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="Bio" class="textBold">Bio</label>
+              <textarea class="form-control border border-secondary" id="Bio" rows="3"></textarea>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label textBold" for="exampleCheck1"><span>Sou um Voluntario
+                  (Criador de conteúdo)</span></label>
+            </div>
+
+          </form>
+        </div>
+
+
+        <div class="form-inline mt-3 justify-content-center">
+          <div class="">
+            <button type="submit" class="btn btn-editar ml-3 my-1 borderButtom" (click)='atualizar()'>Atualizar</button>
           </div>
-      </div>
 
-      <!--/Formulario-->
+          <div class="">
+            <button type="submit" class="btn btn-cancelar ml-3 my-1 borderButtom" routerLink='/feed'>Cancelar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--/Formulario-->
 
   </div>
 </div>

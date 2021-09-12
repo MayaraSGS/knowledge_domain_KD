@@ -51,11 +51,15 @@ input[type='file'] {
 }
 
 /* Aparência que terá o seletor de arquivo */
-label {
+.label {
   background-color: #3498db;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   margin: 10px;
   padding: 6px 20px
+}
+
+a{
+  text-decoration: none;
 }

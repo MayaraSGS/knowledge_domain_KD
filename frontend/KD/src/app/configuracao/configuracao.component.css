@@ -6,16 +6,25 @@
   background-color: #F0F0F0;
 }
 
-.textColor{
-  color: #393F49;
-}
 
-h4{
+.textTitulo{
   font-weight: bold;
   font-size: 2rem;
   color: #1A3761;
   border-bottom : 2px solid #1A3761;
 }
+
+.textTituloSecundario{
+  font-weight: bold;
+  color: #1A3761;
+}
+
+.textInformacao{
+  font-weight: bold;
+  color: #393F49;
+}
+
+
 .textBold{
   font-weight: bold;
 }
@@ -27,6 +36,11 @@ h4{
 
 .btn-editar{
   background-color: #60BE16;
+  color: white;
+}
+
+.btn-cancelar{
+  background-color: #DC0000;
   color: white;
 }
 
