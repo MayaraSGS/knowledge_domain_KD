@@ -11,6 +11,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 
 const routes: Routes = [
 
@@ -26,7 +28,9 @@ const routes: Routes = [
   {path:'feed', component: FeedComponent},
   {path:'tema', component: TemaComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
+  {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
+  {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path:'configuracao', component: ConfiguracaoComponent}
 ];
 

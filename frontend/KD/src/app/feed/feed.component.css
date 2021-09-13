@@ -1,7 +1,6 @@
 .container-fluid{
   background-color: #eDF0F4;
 }
-
 .button{
   border: 2px solid transparent;
   border-radius: 40px;
@@ -10,41 +9,33 @@
   background-color: #EAEAEA;
   color: #7A7575;
 }
-
 .btn-my{
   border: none;
   border-bottom: 2px solid rgb(75, 77, 83);
   background-color: #fff;
 }
-
 .my-btn2{
   border: none;
   border-bottom: 2px solid rgb(75, 77, 83);
   background-color: #eDF0F4;
 }
-
 button span{
   font-size: .9rem;
   color: rgb(56, 55, 55);
 }
-
 .card-body{
   padding: 1rem 2rem 2rem 2rem;
 }
-
 .bg-card{
   background-color: #F0F0F0;
 }
-
 .my-custom{
   padding: 0 2rem 1rem 2rem;
 }
-
 .my-buttom-custom{
   padding: .3rem 3rem .3rem 3rem;
   color: beige;
 }
-
 /* Esconde o input */
 input[type='file'] {
   display: none

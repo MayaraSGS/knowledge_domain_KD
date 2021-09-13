@@ -1,4 +1,3 @@
-import { AuthService } from './../service/auth.service';
 import { User } from './../model/User';
 import { Tema } from './../model/Tema';
 import { PostagemService } from './../service/postagem.service';
@@ -7,6 +6,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { TemaService } from '../service/tema.service';
 import { Postagem } from '../model/Postagem';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-feed',
@@ -42,6 +42,7 @@ export class FeedComponent implements OnInit {
 
     this.getAllPostagens()
     this.getAllTemas()
+    this.findByIdUser(environment.id)
   }
 
   getAllTemas(){
@@ -54,12 +55,6 @@ export class FeedComponent implements OnInit {
     this.PostagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagem = resp
       console.log(JSON.stringify(this.listaPostagem))
-    })
-  }
-
-  findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
-      this.user = resp
     })
   }
 
@@ -93,7 +88,7 @@ export class FeedComponent implements OnInit {
     environment.id = 0
   }
 
-  url='../../assets/perfil.png'
+  url=this.user.foto
 
   onSelectFile(e:any){
     if(e.target.files){
@@ -106,6 +101,15 @@ export class FeedComponent implements OnInit {
       }
 
     }
+  }
+
+  findByIdUser(id: number) {
+
+    this.authService.getByIdUser(id).subscribe((resp: User) => {
+      this.user = resp
+      console.log(JSON.stringify(this.user))
+    })
+
   }
 
 }
