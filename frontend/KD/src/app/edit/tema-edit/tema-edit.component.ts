@@ -12,13 +12,14 @@ import { environment } from 'src/environments/environment.prod';
 export class TemaEditComponent implements OnInit {
 
   tema: Tema = new Tema()
-  idTema: number
+
+  id: number
 
   constructor(
 
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
 
   ) { }
 
@@ -29,8 +30,9 @@ export class TemaEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    let id = this.route.snapshot.params['id']
-    this.findByIdTema(id)
+    this.id = this.route.snapshot.params['id']
+
+    this.findByIdTema(this.id)
 
   }
 
@@ -38,6 +40,7 @@ export class TemaEditComponent implements OnInit {
   findByIdTema(id: number) {
 
     this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
+
       this.tema = resp
       console.log(JSON.stringify(this.tema))
 
@@ -46,11 +49,9 @@ export class TemaEditComponent implements OnInit {
   }
 
   atualizar() {
+    this.tema.id = this.id
 
     this.temaService.putTema(this.tema).subscribe((resp: Tema) => {
-
-      console.log(JSON.stringify(this.tema))
-
       this.tema = resp
       alert('Tema atualizado com sucesso!')
       this.router.navigate(['/tema'])

@@ -1,3 +1,7 @@
+.container-fluid{
+  scroll-margin-top: 100px;
+}
+
 .bg-meioAzul{
   background-image: url('https://i.imgur.com/2dYu2Mx.png');
   background-size: cover;

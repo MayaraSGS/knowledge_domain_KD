@@ -23,11 +23,11 @@ export class PostagemService {
   }
 
   getByIdPostagem(id: number): Observable<Postagem> {
-    return this.http.get<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagens/${id}', this.token)
+    return this.http.get<Postagem>(`https://knowledgedomain.herokuapp.com/api/v1/postagem/${id}`, this.token)
   }
 
   getByTituloPostagem(titulo: string): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>('https://knowledgedomain.herokuapp.com/api/v1/postagens/titulo/${titulo}', this.token)
+    return this.http.get<Postagem[]>(`https://knowledgedomain.herokuapp.com/api/v1/postagem/titulo/${titulo}`, this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
@@ -35,11 +35,11 @@ export class PostagemService {
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.put<Postagem>('https://knowledgedomain.herokuapp.com/api/v1/postagens', postagem, this.token)
+    return this.http.put<Postagem>(`https://knowledgedomain.herokuapp.com/api/v1/postagem`, postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete('https://knowledgedomain.herokuapp.com/api/v1/postagens/${id}', this.token)
+    return this.http.delete(`https://knowledgedomain.herokuapp.com/api/v1/postagem/${id}`, this.token)
   }
 
 }

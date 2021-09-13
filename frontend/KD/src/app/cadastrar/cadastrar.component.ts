@@ -33,6 +33,10 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
    this.user.tipo = this.tipoUsuario
+   this.user.foto = "https://i.imgur.com/Mpwo8Cp.png"
+   this.user.descricao = "Descrição do usuário(a)"
+   this.user.bio = "Bio do usuário(a)"
+
    console.log(JSON.stringify(this.user))
 
     if(this.user.senha != this.confirmarSenha){
